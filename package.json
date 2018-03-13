@@ -1,0 +1,49 @@
+{
+  "name": "ej2-ng-grids-column-validation",
+  "version": "0.0.1",
+  "description": "Syncfusion Angular Grid For column validation",
+  "main": "index.js",
+  "scripts": {
+    "rmf": "node ./node_modules/rimraf/bin dist",
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "bundle": "node ./node_modules/webpack/bin/webpack",
+    "dev": "node ./node_modules/lite-server/bin/lite-server",
+    "start": "npm run rmf && npm run build & npm run bundle & npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhust/ej2-grid-angular-webpack.git"
+  },
+  "author": "Hariharan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Madhust/ej2-grid-angular-webpack/issues"
+  },
+  "homepage": "https://github.com/Madhust/ej2-grid-angular-webpack#readme",
+  "dependencies": {
+    "@angular/common": "*",
+    "@angular/compiler": "*",
+    "@angular/core": "*",
+    "@angular/forms": "*",
+    "@angular/http": "*",
+    "@angular/platform-browser": "*",
+    "@angular/platform-browser-dynamic": "*",
+    "@angular/router": "*",
+    "@syncfusion/ej2-ng-buttons": "*",
+    "@syncfusion/ej2-ng-grids": "*",
+    "angular-in-memory-web-api": "*",
+    "core-js": "^2.4.1",
+    "rxjs": "*",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2",
+    "rimraf": "^2.5.2",
+    "ts-loader": "^2.1.0",
+    "typescript": "2.3.3",
+    "@types/node": "^6.0.46",
+    "@types/core-js": "^0.9.42",
+    "webpack": "^2.2.1"
+  }
+}
