@@ -34,11 +34,10 @@ export class AppComponent implements OnInit {
     }
     recordClick(e: any) {
         if (e.target.classList.contains('e-rowcell')) {
-            let cell: HTMLTableCellElement = <HTMLTableCellElement>closest(<Element>e.target, 'td');
-            let tr: HTMLTableRowElement = <HTMLTableRowElement>closest(cell, '.e-row');
-            if (tr) {
-                let val: boolean = tr.getAttribute('aria-selected') ? false : true;
-                let rowIndex: number = parseInt(cell.parentElement.getAttribute('aria-rowindex'), 10);
+            let args: any = this.grid.getRowInfo(e.target);
+                let tr = args.row;
+                let val: boolean = !isNullOrUndefined(tr.attributes['aria-selected'])&& tr.attributes['aria-selected'].value ? false : true;
+                let rowIndex: number = args.rowIndex;
                 this.grid.editModule.updateCell(rowIndex, 'Active', val);
                 this.grid.editModule.batchSave();
                 let btn: any = document.querySelector('#gridEditConfirm').children[1].children[0];
